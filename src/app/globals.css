@@ -2,26 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 40 21% 92%;
+    --foreground: 0 0% 30%;
+
+    --card: 40 21% 96%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 40%;
+
+    --primary: 260 100% 50%;
+    --primary-foreground: 40 21% 99%;
+
+    --secondary: 40 21% 99%;
+    --secondary-foreground: 0 0% 20%;
+
+    --muted: 40 21% 99%;
+    --muted-foreground: 0 0% 80%;
+
+    --accent: 40 21% 90%;
+    --accent-foreground: 0 0% 20%;
+
+    --destructive: 0 100% 57%;
+    --destructive-foreground: 0 0% 50%;
+
+    --border: 40 21% 85%;
+    --input: 40 21% 97%;
+    --ring: 260 100% 60%;
+
+    --radius: 0.5rem;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .my-container {
+    @apply px-2 sm:px-12 lg:px-16;
+  }
 }
