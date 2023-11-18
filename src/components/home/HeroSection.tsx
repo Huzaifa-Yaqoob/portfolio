@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import BookACallButton from "../common/BookACallButton";
 import ButtonWithArrow from "../common/ButtonWithArrow";
 import { AspectRatio } from "../ui/aspect-ratio";
@@ -55,7 +56,9 @@ export default function HeroSection() {
           </div>
           <div className="flex items-center gap-2 justify-center md:justify-start">
             <BookACallButton />
-            <ButtonWithArrow />
+            <Link href={"/portfolio"}>
+              <ButtonWithArrow />
+            </Link>
           </div>
         </div>
         <div className="grid grid-flow-row grid-cols-2 md:grid-cols-3 md:rounded-tl-lg md:rounded-bl-lg gap-2 md:gap-0">
