@@ -46,4 +46,21 @@
   .my-container {
     @apply px-2 sm:px-12 lg:px-16;
   }
+  .hero-container {
+    @apply px-2 sm:px-12 lg:px-0 lg:pl-16;
+  }
+}
+
+.heroImageMask {
+  -webkit-mask-image: url("/assets/heromask.svg");
+  mask-image: url("/assets/heromask.svg");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+*::selection {
+  color: hsl(40 21% 98%);
+  background: hsl(260 100% 60%);
 }
