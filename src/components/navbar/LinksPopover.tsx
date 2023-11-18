@@ -25,11 +25,15 @@ export default function LinksPopover({ links }: LinksBlockProps) {
     <div className="block md:hidden">
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger>
-          <div className="text-2xl">
+          <div
+            className={`text-2xl p-1 rounded ${
+              open ? "bg-greyShades-g60" : ""
+            }`}
+          >
             {open ? <HiX /> : <HiOutlineMenuAlt3 />}
           </div>
         </PopoverTrigger>
-        <PopoverContent className="w-fit bg-peachShades-p85 border-none mt-4">
+        <PopoverContent className="w-fit bg-peachShades-p85 border-none mt-2">
           <div className="space-y-4">
             <div className="flex flex-col items-start gap-2">
               {links.map((link) => (
