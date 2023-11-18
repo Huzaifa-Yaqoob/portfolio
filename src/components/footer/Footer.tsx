@@ -13,7 +13,7 @@ const socialLinks = [
 ];
 
 const contactInfo = [
-  { name: "mail", icon: HiMail, info: "Nextdev@gmail.com" },
+  { name: "mail", icon: HiMail, info: "nextdev@gmail.com" },
   { name: "phone", icon: HiPhone, info: "+92 1234567899" },
   { name: "location", icon: HiLocationMarker, info: "Somewhere in the World" },
 ];
@@ -25,13 +25,13 @@ export default function Footer() {
         <div className="text-primary font-semibold order-1">
           Jeffery Cannon.
         </div>
-        <div className="order-3 md:order-2">
+        <div className="order-3 md:order-2 space-x-4">
           {pageLinks.map((link) => (
             <Button
               key={link.href}
               asChild
               variant="link"
-              className="text-greyShades-g20"
+              className="text-greyShades-g20 p-0"
             >
               <Link href={link.href}>{link.name}</Link>
             </Button>

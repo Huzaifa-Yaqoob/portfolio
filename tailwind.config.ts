@@ -19,6 +19,10 @@ module.exports = {
       boxShadow: {
         inerglow: "inset 0px 0px 13px 0px hsl(260 100% 90%)",
       },
+      backgroundImage: {
+        "hero-pattern": "url('/assets/container.png')",
+        "footer-texture": "url('/img/footer-texture.png')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
