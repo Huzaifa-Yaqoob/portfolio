@@ -40,7 +40,7 @@ export default function LinksPopover({ links }: LinksBlockProps) {
                 <Button
                   key={link.href}
                   asChild
-                  variant={link.href === pathname ? "secondary" : "ghost"}
+                  variant={link.href === pathname ? "default" : "ghost"}
                   className={`w-full ${
                     link.href === pathname ? "shadow-sm" : ""
                   }`}

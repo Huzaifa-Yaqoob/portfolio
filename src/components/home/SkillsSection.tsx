@@ -49,7 +49,7 @@ const skillData = [
 
 export default function SkillsSection() {
   return (
-    <section className="my-container space-y-8 py-2">
+    <section className="my-container space-y-8">
       <div className="text-center space-y-4">
         <h1 className="text-5xl text-greyShades-g20 font-semibold">
           Creative Skills
@@ -63,7 +63,7 @@ export default function SkillsSection() {
         {skillData.map((skill, index) => (
           <div
             key={index}
-            className="text-3xl flex flex-col justify-center items-center p-8 gap-4 bg-peachShades-p96 rounded"
+            className="text-3xl flex flex-col justify-center items-center p-8 gap-4 bg-peachShades-p96 rounded-lg"
           >
             <GlowingButton Icon={skill.icon} />
             <div className="text-center">

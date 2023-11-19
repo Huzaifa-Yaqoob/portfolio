@@ -17,7 +17,7 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        inerglow: "inset 0px 0px 8px 0px hsla(260 100% 90% )",
+        inerglow: "inset 0px 0px 16px 0px hsla(260 100% 90% )",
         inerglowRemove: "inset 0px 0px 0px 0px hsla(260 100% 90% )",
       },
       backgroundImage: {

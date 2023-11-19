@@ -27,7 +27,7 @@ export const pageLinks: PageLinks[] = [
 
 export default function Navbar(): React.ReactElement {
   return (
-    <nav className="bg-background border-b-[1px] my-container flex justify-between items-center py-2 sticky top-0 z-10">
+    <nav className="bg-background border-b-[1px] my-container flex justify-between items-center  sticky top-0 z-10">
       <div className="text-primary font-semibold">Jeffery Cannon.</div>
       <div>
         <LinksBlock links={pageLinks} />

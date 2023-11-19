@@ -22,8 +22,8 @@
     --muted: 40 21% 99%;
     --muted-foreground: 0 0% 80%;
 
-    --accent: 40 21% 90%;
-    --accent-foreground: 0 0% 20%;
+    --accent: 260 100% 70%;
+    --accent-foreground: 260 100% 95%;
 
     --destructive: 0 100% 57%;
     --destructive-foreground: 0 0% 50%;
@@ -44,7 +44,7 @@
     @apply bg-background text-foreground;
   }
   .my-container {
-    @apply px-2 sm:px-12 lg:px-16;
+    @apply px-2 py-2 sm:px-12 lg:px-16;
   }
   .hero-container {
     @apply px-2 sm:px-12 lg:px-0 lg:pl-16;
