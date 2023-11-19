@@ -19,8 +19,10 @@ export default function LinksBlock({
         <Button
           key={link.href}
           asChild
-          variant={link.href === pathname ? "secondary" : "ghost"}
-          className={link.href === pathname ? "shadow-sm" : ""}
+          variant={link.href === pathname ? "default" : "ghost"}
+          className={`transition-colors duration-500 ${
+            link.href === pathname ? "shadow-sm" : ""
+          }`}
         >
           <Link href={link.href} className="text-greyShades-g20">
             {link.name}

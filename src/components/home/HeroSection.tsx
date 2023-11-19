@@ -35,6 +35,7 @@ export default function HeroSection() {
             alt="person"
             width={500}
             height={500}
+            loading="lazy"
             className="object-contain saturate-0"
           />
         </AspectRatio>

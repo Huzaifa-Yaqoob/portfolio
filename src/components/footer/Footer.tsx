@@ -20,7 +20,7 @@ const contactInfo = [
 
 export default function Footer() {
   return (
-    <footer className="my-container border-t-[1px] space-y-4 py-2">
+    <footer className="my-container border-t-[1px] space-y-4 ">
       <div className="flex flex-col md:flex-row gap-4 md:justify-between items-center">
         <div className="text-primary font-semibold order-1">
           Jeffery Cannon.
