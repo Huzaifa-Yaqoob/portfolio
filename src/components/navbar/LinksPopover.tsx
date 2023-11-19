@@ -1,7 +1,8 @@
 "use client";
 
-import { HiX, HiOutlineMenuAlt3 } from "react-icons/hi";
 import Link from "next/link";
+import { useScroll, useMotionValueEvent } from "framer-motion";
+import { HiX, HiOutlineMenuAlt3 } from "react-icons/hi";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { type PageLinks } from "./Navbar";
@@ -18,8 +19,11 @@ interface LinksBlockProps {
 }
 
 export default function LinksPopover({ links }: LinksBlockProps) {
-  const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", () => setOpen(false));
 
   return (
     <div className="block md:hidden">

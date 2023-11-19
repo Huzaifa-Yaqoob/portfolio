@@ -7,6 +7,7 @@ import {
   HiCursorArrowRipple,
 } from "react-icons/hi2";
 import GlowingButton from "../common/GlowingButton";
+import Reveal from "../animations/Reveal";
 
 const skillData = [
   {
@@ -51,28 +52,31 @@ export default function SkillsSection() {
   return (
     <section className="my-container space-y-8">
       <div className="text-center space-y-4">
-        <h1 className="text-5xl text-greyShades-g20 font-semibold">
-          Creative Skills
-        </h1>
-        <p>
-          As a web designer, I possess a diverse set of skills and expertise to
-          bring your web design visions to life
-        </p>
+        <Reveal width="w-full">
+          <h1 className="text-5xl text-greyShades-g20 font-semibold">
+            Creative Skills
+          </h1>
+        </Reveal>
+        <Reveal width="w-full" delay={2}>
+          <p>
+            As a web designer, I possess a diverse set of skills and expertise
+            to bring your web design visions to life
+          </p>
+        </Reveal>
       </div>
       <div className="grid grid-flow-row grid-cols-1 md:grid-flow-row md:grid-cols-3 md:grid-rows-2 gap-4">
         {skillData.map((skill, index) => (
-          <div
-            key={index}
-            className="text-3xl flex flex-col justify-center items-center p-8 gap-4 bg-peachShades-p96 rounded-lg"
-          >
-            <GlowingButton Icon={skill.icon} />
-            <div className="text-center">
-              <h3 className="text-2xl font-semibold text-greyShades-g20">
-                {skill.title}
-              </h3>
-              <p className="text-base">{skill.description}</p>
+          <Reveal key={index} delay={3 + index}>
+            <div className="text-3xl flex flex-col justify-center items-center p-8 gap-4 bg-peachShades-p96 rounded-lg">
+              <GlowingButton Icon={skill.icon} />
+              <div className="text-center">
+                <h3 className="text-2xl font-semibold text-greyShades-g20">
+                  {skill.title}
+                </h3>
+                <p className="text-base">{skill.description}</p>
+              </div>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>
