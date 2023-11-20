@@ -1,5 +1,6 @@
 import LinksBlock from "./LinksBlock";
 import LinksPopover from "./LinksPopover";
+import NavVisibility from "../animations/NavVisibility";
 
 // pageLinks of this website and the interface of pageLinks
 export type PageLinks = {
@@ -27,12 +28,12 @@ export const pageLinks: PageLinks[] = [
 
 export default function Navbar(): React.ReactElement {
   return (
-    <nav className="bg-background border-b-[1px] my-container flex justify-between items-center  sticky top-0 z-10">
+    <NavVisibility classes="bg-background border-b-[1px] my-container flex justify-between items-center sticky top-0 z-10">
       <div className="text-primary font-semibold">Jeffery Cannon.</div>
       <div>
         <LinksBlock links={pageLinks} />
         <LinksPopover links={pageLinks} />
       </div>
-    </nav>
+    </NavVisibility>
   );
 }

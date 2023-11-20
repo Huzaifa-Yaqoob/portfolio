@@ -24,7 +24,7 @@ export default function HeroSection() {
   return (
     <section className="hero-container md:grid md:grid-rows-1 md:grid-flow-row md:grid-cols-3">
       <div className="md:order-2">
-        <Reveal width="w-full">
+        <Reveal classes="w-full" delay={0}>
           <AspectRatio
             ratio={120 / 163}
             className="p-0 m-0 flex items-end bg-hero-pattern bg-cover bg-center bg-no-repeat heroImageMask"
@@ -36,7 +36,7 @@ export default function HeroSection() {
                 width={500}
                 height={500}
                 loading="lazy"
-                className="object-contain saturate-0"
+                className="object-contain saturate-0 transition-all duration-500 hover:saturate-100"
               />
             </RevealPersonImage>
           </AspectRatio>
@@ -44,7 +44,7 @@ export default function HeroSection() {
       </div>
       <div className="flex flex-col gap-8 md:col-span-2 py-6 md:py-12 md:order-1">
         <div className="flex flex-col gap-8 text-center md:text-left">
-          <Reveal>
+          <Reveal classes="w-full">
             <div className="bg-peachShades-p95 py-1 px-2 rounded w-fit m-auto md:m-0">
               Hello There 🤗
             </div>
@@ -83,14 +83,15 @@ export default function HeroSection() {
                 index === 0 ? "col-span-2 md:col-auto" : ""
               }`}
             >
-              <Reveal delay={index + 1}>
-                <div className="flex flex-col gap-2 items-center md:items-start">
-                  <span className="text-5xl font-bold">
-                    {achievement.quantity}
-                    <span className="text-primary">+</span>
-                  </span>
-                  <span>{achievement.title}</span>
-                </div>
+              <Reveal
+                delay={index + 1}
+                classes="flex flex-col gap-2 items-center md:items-start"
+              >
+                <span className="text-5xl font-bold">
+                  {achievement.quantity}
+                  <span className="text-primary">+</span>
+                </span>
+                <span>{achievement.title}</span>
               </Reveal>
             </div>
           ))}

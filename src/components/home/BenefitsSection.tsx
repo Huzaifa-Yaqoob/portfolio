@@ -32,12 +32,12 @@ export default function BenefitsSection() {
   return (
     <section className="my-container space-y-8">
       <div className="text-center space-y-4">
-        <Reveal width="w-full" delay={1}>
+        <Reveal classes="w-full" delay={1}>
           <h1 className="text-5xl font-semibold text-greyShades-g20">
             Benefits
           </h1>
         </Reveal>
-        <Reveal width="w-full" delay={2}>
+        <Reveal classes="w-full" delay={2}>
           <p>
             By choosing my web design service, you'll enjoy the following
             benefits
@@ -47,26 +47,32 @@ export default function BenefitsSection() {
       <div className="space-y-4">
         <div className="flex flex-col md:flex-row gap-4">
           {BenefitsData.slice(0, 2).map((benefit, index) => (
-            <Reveal key={index} delay={3 + index}>
-              <article className="p-8 bg-peachShades-p96 rounded-lg">
+            <article key={index}>
+              <Reveal
+                delay={3 + index}
+                classes="p-8 bg-peachShades-p96 rounded-lg"
+              >
                 <h3 className="text-2xl font-semibold text-greyShades-g20">
                   {benefit.title}
                 </h3>
                 <p>{benefit.description}</p>
-              </article>
-            </Reveal>
+              </Reveal>
+            </article>
           ))}
         </div>
         <div className="flex flex-col md:flex-row gap-4">
           {BenefitsData.slice(2, 5).map((benefit, index) => (
-            <Reveal key={index} delay={3 + index}>
-              <article className="p-8 bg-peachShades-p96 rounded-lg">
+            <article key={index}>
+              <Reveal
+                delay={3 + index}
+                classes="p-8 bg-peachShades-p96 rounded-lg"
+              >
                 <h3 className="text-2xl font-semibold text-greyShades-g20">
                   {benefit.title}
                 </h3>
                 <p>{benefit.description}</p>
-              </article>
-            </Reveal>
+              </Reveal>
+            </article>
           ))}
         </div>
       </div>
