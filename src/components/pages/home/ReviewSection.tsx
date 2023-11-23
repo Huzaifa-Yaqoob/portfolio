@@ -18,22 +18,22 @@ export default function ReviewSection() {
         {reviewData.map((review, index) => (
           <article
             key={index}
-            className="space-y-4 p-8 bg-peachShades-p96 rounded"
+            className="space-y-4 p-8 bg-peachShades-p96 rounded block"
           >
             <div className="flex justify-between items-center">
-              <div className="flex flex-col items-start gap-0">
-                <h3 className="font-semibold text-greyShades-g20">
-                  {review.username}
-                </h3>
-                <div className="text-greyShades-g40 p-0 m-0">
+              <div className="inline">
+                <span>
+                  <h2 className="font-semibold text-greyShades-g20">
+                    {review.username}
+                  </h2>
                   <Link
                     target="_blank"
                     href={review.website.href}
-                    className="text-greyShades-g40"
+                    className="text-greyShades-g40 hover:underline underline-offset-4 w-fit"
                   >
                     {review.website.name}
                   </Link>
-                </div>
+                </span>
               </div>
               <div className="flex gap-2">
                 <Link href={review.linkedinID} className={classesForSocialLink}>
