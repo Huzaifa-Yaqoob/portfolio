@@ -66,3 +66,8 @@
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
+
+.custome-caraousal .slick-list .slick-track .slick-slide div {
+  display: flex;
+  gap: 1rem;
+}

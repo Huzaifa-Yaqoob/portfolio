@@ -23,9 +23,11 @@ export default function Carousal({ children, slideCount }: CarousalProps) {
     spaceBetween: 20,
     swipeToSlide: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesPerRow: 3,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     arrows: false,
+    responsive: [{ breakpoint: 1024, settings: { slidesPerRow: 2 } }],
     afterChange: (current: number) => setActiveSlide(current),
   };
   return (
@@ -48,7 +50,7 @@ export default function Carousal({ children, slideCount }: CarousalProps) {
         </div>
       </div>
       <Separator />
-      <Slider ref={slider} {...settings}>
+      <Slider ref={slider} {...settings} className="custome-caraousal">
         {children}
       </Slider>
     </div>

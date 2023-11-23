@@ -25,8 +25,10 @@ export default function ImagesCarousal({ images }: WorksCarousalProps) {
     }
   };
 
-  var settings = {
-    dragging: false,
+  const settings = {
+    draggable: false,
+    swipe: false,
+    focusOnSelect: false,
     dots: false,
     infinite: true,
     speed: 500,
@@ -38,7 +40,7 @@ export default function ImagesCarousal({ images }: WorksCarousalProps) {
   };
   return (
     <div className="space-y-4">
-      <Slider ref={slider} {...settings} draggable={false} swipeToSlide={false}>
+      <Slider ref={slider} {...settings}>
         {images.map((image, index) => (
           <AspectRatio ratio={41 / 31} key={index}>
             <Image
