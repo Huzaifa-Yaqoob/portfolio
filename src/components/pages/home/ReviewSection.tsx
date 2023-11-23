@@ -21,15 +21,11 @@ export default function ReviewSection() {
             className="space-y-4 p-8 bg-peachShades-p96 rounded"
           >
             <div className="flex justify-between items-center">
-              <div>
+              <div className="flex flex-col items-start gap-0">
                 <h3 className="font-semibold text-greyShades-g20">
                   {review.username}
                 </h3>
-                <Button
-                  variant={"link"}
-                  asChild
-                  className="text-greyShades-g40 p-0"
-                >
+                <div className="text-greyShades-g40 p-0 m-0">
                   <Link
                     target="_blank"
                     href={review.website.href}
@@ -37,7 +33,7 @@ export default function ReviewSection() {
                   >
                     {review.website.name}
                   </Link>
-                </Button>
+                </div>
               </div>
               <div className="flex gap-2">
                 <Link href={review.linkedinID} className={classesForSocialLink}>
