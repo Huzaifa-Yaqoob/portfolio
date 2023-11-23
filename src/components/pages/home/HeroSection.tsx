@@ -1,24 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import BookACallButton from "../common/BookACallButton";
-import ButtonWithArrow from "../common/ButtonWithArrow";
-import { AspectRatio } from "../ui/aspect-ratio";
-import Reveal, { RevealPersonImage } from "../animations/Reveal";
-
-const achievementInfo = [
-  {
-    quantity: "55",
-    title: "Completed Projects",
-  },
-  {
-    quantity: "20",
-    title: "Happy Customers",
-  },
-  {
-    quantity: "08",
-    title: "Years of Experience",
-  },
-];
+import BookACallButton from "../../common/BookACallButton";
+import ButtonWithArrow from "../../common/ButtonWithArrow";
+import { AspectRatio } from "../../ui/aspect-ratio";
+import Reveal, { RevealPersonImage } from "../../animations/Reveal";
+import { achievementInfo } from "@/data/info";
 
 export default function HeroSection() {
   return (
@@ -36,7 +22,7 @@ export default function HeroSection() {
                 width={500}
                 height={500}
                 loading="lazy"
-                className="object-contain saturate-0 transition-all duration-500 hover:saturate-100"
+                className="object-contain saturate-0 transition-all duration-500 hover:saturate-100 h-auto w-auto"
               />
             </RevealPersonImage>
           </AspectRatio>

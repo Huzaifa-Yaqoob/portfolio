@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
         <div className="flex gap-4 order-2 md:order-3">
           {socialLinks.map((link) => (
-            <Link key={link.name} href={link.href}>
+            <Link target="_blank" key={link.name} href={link.href}>
               <GlowingButton Icon={link.icon} />
             </Link>
           ))}

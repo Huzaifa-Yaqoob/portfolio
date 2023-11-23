@@ -1,3 +1,4 @@
+import Link from "next/link";
 import LinksBlock from "./LinksBlock";
 import LinksPopover from "./LinksPopover";
 import NavVisibility from "../animations/NavVisibility";
@@ -29,7 +30,9 @@ export const pageLinks: PageLinks[] = [
 export default function Navbar(): React.ReactElement {
   return (
     <NavVisibility classes="bg-background border-b-[1px] my-container flex justify-between items-center sticky top-0 z-10">
-      <div className="text-primary font-semibold">Jeffery Cannon.</div>
+      <Link href="/" className="text-primary font-semibold">
+        Jeffery Cannon.
+      </Link>
       <div>
         <LinksBlock links={pageLinks} />
         <LinksPopover links={pageLinks} />

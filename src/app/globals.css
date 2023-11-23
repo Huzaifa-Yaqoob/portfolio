@@ -51,6 +51,13 @@
   }
 }
 
+/* css for selected text */
+*::selection {
+  color: hsl(40 21% 98%);
+  background: hsl(260 100% 60%);
+}
+
+/* css for image in herosection to add a svg mask on it */
 .heroImageMask {
   -webkit-mask-image: url("/assets/heromask.svg");
   mask-image: url("/assets/heromask.svg");
@@ -58,9 +65,4 @@
   mask-size: cover;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
-}
-
-*::selection {
-  color: hsl(40 21% 98%);
-  background: hsl(260 100% 60%);
 }
