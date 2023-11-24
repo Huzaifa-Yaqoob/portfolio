@@ -1,4 +1,5 @@
 import { HiStar } from "react-icons/hi";
+import Link from "next/link";
 import { FAQHeader } from "@/data/headingData";
 import SubHeading from "../../common/SubHeading";
 import { faqData } from "@/data/faqData";
@@ -49,7 +50,9 @@ export default function FAQSection() {
               design needs and bring your digital vision to life!
             </p>
           </div>
-          <Button>Contact Me</Button>
+          <Button asChild>
+            <Link href="/contact-me">Contact Me</Link>
+          </Button>
         </div>
       </div>
     </section>
