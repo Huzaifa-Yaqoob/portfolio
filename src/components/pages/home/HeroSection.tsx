@@ -8,9 +8,9 @@ import { achievementInfo } from "@/data/info";
 
 export default function HeroSection() {
   return (
-    <section className="hero-container md:grid md:grid-rows-1 md:grid-flow-row md:grid-cols-3">
+    <section className="hero-container md:grid md:grid-rows-1 md:grid-flow-row md:grid-cols-2 lg:grid-cols-3">
       <div className="md:order-2">
-        <Reveal classes="w-full" delay={0}>
+        <Reveal classes="w-full">
           <AspectRatio
             ratio={120 / 163}
             className="p-0 m-0 flex items-end bg-hero-pattern bg-cover bg-center bg-no-repeat heroImageMask"
@@ -28,7 +28,7 @@ export default function HeroSection() {
           </AspectRatio>
         </Reveal>
       </div>
-      <div className="flex flex-col gap-8 md:col-span-2 py-6 md:py-12 md:order-1">
+      <div className="flex flex-col gap-8 md:col-span-1 lg:col-span-2 py-6 md:py-12 md:order-1">
         <div className="flex flex-col gap-8 text-center md:text-left">
           <Reveal classes="w-full">
             <div className="bg-peachShades-p95 py-1 px-2 rounded w-fit m-auto md:m-0">

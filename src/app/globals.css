@@ -66,6 +66,14 @@
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
+.introImageMask {
+  -webkit-mask-image: url("/assets/intromask.svg");
+  mask-image: url("/assets/intromask.svg");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
 
 /* style for caraousal component to make it flex and give them space in between */
 .custome-caraousal .slick-list .slick-track .slick-slide div {
