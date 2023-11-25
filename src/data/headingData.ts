@@ -32,3 +32,9 @@ export const FAQHeader: Header = {
   heading: "Frequently Asked Questions ",
   paragraph: "Here are answers to some common questions",
 };
+
+export const MileStonesHeader: Header = {
+  heading: "Milestones of My Career",
+  paragraph:
+    "Lorem ipsum dolor sit amet consectetur. Nisl ut neque tortor nulla felis nunc. Sit ac sed sed pulvinar sit purus morbi. Elit amet sed velit auctor urna vitae nam ultricies massa.",
+};
