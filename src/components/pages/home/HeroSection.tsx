@@ -22,7 +22,7 @@ export default function HeroSection() {
                 width={500}
                 height={500}
                 loading="lazy"
-                className="object-contain saturate-0 transition-all duration-500 hover:saturate-100 h-auto w-auto"
+                className="object-contain saturate-0 transition-all duration-500 h-auto w-auto"
               />
             </RevealPersonImage>
           </AspectRatio>

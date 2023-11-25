@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { FaLinkedin, FaFacebook, FaXTwitter } from "react-icons/fa6";
-import { Button } from "@/components/ui/button";
 import SubHeading from "../../common/SubHeading";
 import RatingStars from "@/components/common/RatingStars";
 import { reviewHeader } from "@/data/headingData";

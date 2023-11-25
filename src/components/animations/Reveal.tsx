@@ -69,3 +69,40 @@ export function RevealPersonImage({
     </motion.div>
   );
 }
+
+interface RevealFromSides extends RevealProps {
+  side: "left" | "right";
+}
+
+export function RevealFromSides({
+  children,
+  classes = "w-fit",
+  delay = 1,
+  side,
+}: RevealFromSides) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+  const control = useAnimation();
+  useEffect(() => {
+    if (inView) {
+      control.start(side === "left" ? "visibleL" : "visibleR");
+    }
+  });
+  return (
+    <motion.div
+      ref={ref}
+      className={classes}
+      variants={{
+        hiddenL: { opacity: 0, x: -75 },
+        hiddenR: { opacity: 0, x: 75 },
+        visibleL: { opacity: 1, x: 0 },
+        visibleR: { opacity: 1, x: 0 },
+      }}
+      initial={side === "left" ? "hiddenL" : "hiddenR"}
+      animate={control}
+      // transition={{ duration: 1, delay: 0.3 }}
+    >
+      {children}
+    </motion.div>
+  );
+}

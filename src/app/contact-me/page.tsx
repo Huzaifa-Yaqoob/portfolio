@@ -1,3 +1,3 @@
 export default function ContactMe() {
-  return <main>Contact Me</main>;
+  return <main className="space-y-32 mb-16 mt-16">Contact Me</main>;
 }
