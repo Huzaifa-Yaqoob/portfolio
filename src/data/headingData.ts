@@ -1,5 +1,3 @@
-import { Head } from "next/document";
-
 export type Header = {
   heading: string;
   paragraph: string;
@@ -37,4 +35,16 @@ export const MileStonesHeader: Header = {
   heading: "Milestones of My Career",
   paragraph:
     "Lorem ipsum dolor sit amet consectetur. Nisl ut neque tortor nulla felis nunc. Sit ac sed sed pulvinar sit purus morbi. Elit amet sed velit auctor urna vitae nam ultricies massa.",
+};
+
+export const portfolioHeader: Header = {
+  heading: "My Creative Portfolios",
+  paragraph:
+    "Here's what some of my satisfied clients have to say about my work",
+};
+
+export const contactMeHeader: Header = {
+  heading: "We’d love to here from you.",
+  paragraph:
+    "Here's what some of my satisfied clients have to say about my work",
 };
