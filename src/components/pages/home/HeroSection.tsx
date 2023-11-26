@@ -38,7 +38,7 @@ export default function HeroSection() {
           <div className="space-y-4">
             <Reveal>
               <h1 className="text-6xl font-semibold text-greyShades-g10">
-                Jeffery Cannon Welcome`s You!
+                Jeffery Cannon Welcome's You!
               </h1>
             </Reveal>
             <Reveal delay={2}>
