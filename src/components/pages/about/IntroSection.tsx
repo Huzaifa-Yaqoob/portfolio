@@ -35,7 +35,7 @@ export default function IntroSection() {
         <div className="space-y-4">
           <Reveal>
             <h1 className="text-6xl font-semibold text-greyShades-g10">
-              I'm Jeffery Cannon
+              I`m Jeffery Cannon
             </h1>
           </Reveal>
           <Reveal delay={2}>
