@@ -42,7 +42,7 @@ export default function FAQSection() {
           </Accordion>
         </div>
         <Reveal classes="flex flex-col gap-4 items-center md:items-start bg-peachShades-p96 rounded p-8 h-fit">
-          <GlowingButton Icon={HiStar} size="text-2xl" />
+          <GlowingButton Icon={HiStar} size="text-4xl" />
           <div className="space-y-2 text-center md:text-left">
             <h2 className="text-greyShades-g20 font-semibold text-2xl">
               Still have any Questions ?

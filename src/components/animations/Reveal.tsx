@@ -100,7 +100,37 @@ export function RevealFromSides({
       }}
       initial={side === "left" ? "hiddenL" : "hiddenR"}
       animate={control}
-      // transition={{ duration: 1, delay: 0.3 }}
+      transition={{ delay: 0.2 * delay }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+export function RevealViaScale({
+  children,
+  classes = "w-fit",
+  delay = 1,
+}: RevealProps) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+  const control = useAnimation();
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  });
+  return (
+    <motion.div
+      className={classes}
+      ref={ref}
+      variants={{
+        hidden: { scale: 0 },
+        visible: { scale: 1 },
+      }}
+      initial="hidden"
+      animate={control}
+      transition={{ delay: 0.2 * delay }}
     >
       {children}
     </motion.div>
