@@ -6,17 +6,18 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { Separator } from "@/components/ui/separator";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { title } from "process";
 
 interface CarousalProps {
   children: React.ReactNode;
   slideCount: number;
+  carousalName: string;
   title: string;
 }
 
 export default function Carousal({
   children,
   slideCount,
+  carousalName,
   title,
 }: CarousalProps) {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -54,7 +55,7 @@ export default function Carousal({
         </div>
       </div>
       <Separator />
-      <Slider ref={slider} {...settings} className="custome-caraousal">
+      <Slider ref={slider} {...settings} className={carousalName}>
         {children}
       </Slider>
     </div>

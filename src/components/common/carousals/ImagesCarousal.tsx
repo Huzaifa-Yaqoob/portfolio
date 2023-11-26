@@ -39,7 +39,7 @@ export default function ImagesCarousal({ images }: WorksCarousalProps) {
     afterChange: (current: number) => setActiveSlide(current),
   };
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 block w-full h-full">
       <Slider ref={slider} {...settings}>
         {images.map((image, index) => (
           <AspectRatio ratio={41 / 31} key={index}>
