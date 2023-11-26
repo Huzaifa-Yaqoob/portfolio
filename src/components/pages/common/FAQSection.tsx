@@ -48,7 +48,7 @@ export default function FAQSection() {
               Still have any Questions ?
             </h2>
             <p>
-              Let's collaborate to create an exceptional website that sets you
+              Let`s collaborate to create an exceptional website that sets you
               apart from the competition. Contact me today to discuss your web
               design needs and bring your digital vision to life!
             </p>
