@@ -14,7 +14,11 @@ interface CarousalProps {
   title: string;
 }
 
-export default function Carousal({ children, slideCount }: CarousalProps) {
+export default function Carousal({
+  children,
+  slideCount,
+  title,
+}: CarousalProps) {
   const [activeSlide, setActiveSlide] = useState(0);
   const slider = useRef<HTMLDivElement | null | any>(null);
   var settings = {
@@ -33,7 +37,7 @@ export default function Carousal({ children, slideCount }: CarousalProps) {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <div>{slideCount} Reviews</div>
+        <div>{title}</div>
         <div className="flex items-center gap-4">
           <div
             onClick={() => slider.current?.slickPrev()}

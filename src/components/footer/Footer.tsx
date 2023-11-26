@@ -1,22 +1,8 @@
 import Link from "next/link";
-import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { FiDribbble } from "react-icons/fi";
-import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
+import { socialLinks, contactInfo } from "@/data/info";
 import { pageLinks } from "../navbar/Navbar";
 import { Button } from "../ui/button";
 import GlowingButton from "../common/GlowingButton";
-
-const socialLinks = [
-  { name: "Linkedin", href: "/", icon: FaLinkedin },
-  { name: "X", href: "/", icon: FaXTwitter },
-  { name: "Dribbble", href: "/", icon: FiDribbble },
-];
-
-const contactInfo = [
-  { name: "mail", icon: HiMail, info: "nextdev@gmail.com" },
-  { name: "phone", icon: HiPhone, info: "+92 1234567899" },
-  { name: "location", icon: HiLocationMarker, info: "Somewhere in the World" },
-];
 
 export default function Footer() {
   return (
@@ -47,8 +33,8 @@ export default function Footer() {
       </div>
       <div className="hidden justify-center md:flex">
         <div className="p-2 flex gap-6 items-center border-[1px] rounded">
-          {contactInfo.map((item) => (
-            <div key={item.name} className="flex gap-2 items-center">
+          {contactInfo.map((item, index) => (
+            <div key={index} className="flex gap-2 items-center">
               <item.icon className="text-primary" />
               <span className="">{item.info}</span>
             </div>

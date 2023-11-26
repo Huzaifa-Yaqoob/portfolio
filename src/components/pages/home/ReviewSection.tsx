@@ -13,7 +13,10 @@ export default function ReviewSection() {
   return (
     <section className="my-container hidden md:block space-y-8">
       <SubHeading header={reviewHeader} />
-      <Carousal slideCount={reviewData.length} title="Reviews">
+      <Carousal
+        slideCount={reviewData.length}
+        title={reviewData.length + " Reviews"}
+      >
         {reviewData.map((review, index) => (
           <article
             key={index}
