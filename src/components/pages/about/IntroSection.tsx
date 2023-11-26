@@ -13,14 +13,16 @@ export default function IntroSection() {
           ratio={615 / 596}
           className="flex items-end bg-hero-pattern bg-cover bg-center bg-no-repeat introImageMask"
         >
-          <Image
-            src="/assets/person.png"
-            alt="person"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            fill
-            loading="lazy"
-            className="object-contain saturate-0 transition-all duration-500 relative"
-          />
+          <RevealPersonImage>
+            <Image
+              src="/assets/person.png"
+              alt="person"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              fill
+              loading="lazy"
+              className="object-contain saturate-0 transition-all duration-500 relative"
+            />
+          </RevealPersonImage>
         </AspectRatio>
       </Reveal>
 

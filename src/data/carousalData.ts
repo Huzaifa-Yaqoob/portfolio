@@ -8,28 +8,28 @@ export const carousalData: CarousalData[] = [
   {
     title: "Z - Aura Perfume Website Design",
     images: [
-      "/assets/Aura_Perfume.png",
-      "/assets/Aura_Perfume.png",
-      "/assets/Aura_Perfume.png",
-      "/assets/Aura_Perfume.png",
+      "/assets/work/2023/Aura_Perfume.png",
+      "/assets/work/2023/Aura_Perfume.png",
+      "/assets/work/2023/Aura_Perfume.png",
+      "/assets/work/2023/Aura_Perfume.png",
     ],
   },
   {
     title: "Forhelp Charity Website Design",
     images: [
-      "/assets/Forhelp_Charity.png",
-      "/assets/Forhelp_Charity.png",
-      "/assets/Forhelp_Charity.png",
-      "/assets/Forhelp_Charity.png",
+      "/assets/work/2023/Forhelp_Charity.png",
+      "/assets/work/2023/Forhelp_Charity.png",
+      "/assets/work/2023/Forhelp_Charity.png",
+      "/assets/work/2023/Forhelp_Charity.png",
     ],
   },
   {
     title: "Skill Bridge Website Design",
     images: [
-      "/assets/Skill_Bridge.png",
-      "/assets/Skill_Bridge.png",
-      "/assets/Skill_Bridge.png",
-      "/assets/Skill_Bridge.png",
+      "/assets/work/2023/Skill_Bridge.png",
+      "/assets/work/2023/Skill_Bridge.png",
+      "/assets/work/2023/Skill_Bridge.png",
+      "/assets/work/2023/Skill_Bridge.png",
     ],
   },
 ];
