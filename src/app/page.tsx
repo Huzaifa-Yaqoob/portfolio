@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import HeroSection from "@/components/pages/home/HeroSection";
 import SkillsSection from "@/components/pages/home/SkillsSection";
 import BenefitsSection from "@/components/pages/home/BenefitsSection";
