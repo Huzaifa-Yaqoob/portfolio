@@ -106,6 +106,7 @@ module.exports = {
           blue: "hsl(223 100% 57%)",
           blueLight: "hsl(223 100% 79%)",
           red: "hsl(0 100% 57%)",
+          redLight: "hsl(0 100% 78%)",
         },
       },
       borderRadius: {

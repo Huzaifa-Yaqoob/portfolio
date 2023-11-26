@@ -78,9 +78,6 @@
 /* style for caraousal component to make it flex and give them space in between */
 .review-carousal .slick-list .slick-track .slick-slide div {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
   gap: 1rem;
 }
 
