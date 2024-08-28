@@ -19,7 +19,7 @@ export const carousalData: CarousalData[] = [
     images: [
       "/assets/work/portfolio/home.png",
       "/assets/work/portfolio/about.png",
-      "/assets/work/portfolio/portfolio.png",
+      "/assets/work/portfolio/portfolioo.png",
       "/assets/work/portfolio/contact.png",
     ],
   },
