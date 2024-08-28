@@ -50,13 +50,6 @@ export default function ImagesCarousal({ images }: WorksCarousalProps) {
               fill
               className="object-cover rounded-lg h-auto w-auto"
             />
-            <Link
-              href={"http://localhost:3000/" + image}
-              target="_blank"
-              className="absolute bottom-2 right-2 bg-peachShades-p96 rounded p-1 shadow"
-            >
-              <HiArrowUpRight />
-            </Link>
           </AspectRatio>
         ))}
       </Slider>

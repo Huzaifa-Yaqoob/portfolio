@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import BookACallButton from "../../common/BookACallButton";
-import ButtonWithArrow from "../../common/ButtonWithArrow";
+import { contactInfo } from "@/data/info";
 import { AspectRatio } from "../../ui/aspect-ratio";
 import Reveal, { RevealPersonImage } from "../../animations/Reveal";
 import { achievementInfo } from "@/data/info";
@@ -38,27 +37,34 @@ export default function HeroSection() {
           <div className="space-y-4">
             <Reveal>
               <h1 className="text-6xl font-semibold text-greyShades-g10">
-                Jeffery Cannon Welcome`s You!
+                Muhammad Huziafa Yaqoob Welcome`s You!
               </h1>
             </Reveal>
             <Reveal delay={2}>
               <p className="md:mr-8">
-                I am a passionate and experienced web designer, dedicated to
-                creating visually stunning and highly functional websites.
-                Explore my portfolio to see the power of effective design in
-                action
+                I am a passionate <b>full-stack web developer</b>, committed to
+                building robust, scalable, and user-friendly web applications.
+                Explore my portfolio to see how I bring complex ideas to life
+                through code.
               </p>
             </Reveal>
           </div>
           <div className="flex items-center gap-2 justify-center md:justify-start">
-            <Reveal>
-              <BookACallButton />
-            </Reveal>
-            <Reveal delay={2}>
-              <Link href={"/portfolio"}>
-                <ButtonWithArrow />
-              </Link>
-            </Reveal>
+            <div className="p-2 flex flex-col gap-6 items-center md:items-start">
+              {contactInfo.map((item, index) => (
+                <Reveal key={index} delay={index + 2}>
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex gap-2 items-center border p-1 rounded"
+                  >
+                    <item.icon className="text-primary" />
+                    <span className="">{item.info}</span>
+                  </a>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
         <div className="grid grid-flow-row grid-cols-2 md:grid-cols-3 md:rounded-tl-lg md:rounded-bl-lg gap-2 md:gap-0">
@@ -75,7 +81,6 @@ export default function HeroSection() {
               >
                 <span className="text-5xl font-bold">
                   {achievement.quantity}
-                  <span className="text-primary">+</span>
                 </span>
                 <span>{achievement.title}</span>
               </Reveal>

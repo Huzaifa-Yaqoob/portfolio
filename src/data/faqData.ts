@@ -5,30 +5,25 @@ export type FAQData = {
 
 export const faqData: FAQData[] = [
   {
-    question: "Can you work with clients remotely?",
+    question: "What technologies and languages are you proficient in?",
     answer:
-      "Absolutely! I have experience working with clients from all around the world. Through effective communication channels such as email, video calls, and project management tools, I ensure seamless collaboration regardless of geographical location.",
+      "I am proficient in a wide range of technologies including HTML, CSS, JavaScript, and its frameworks like React and Node.js. For backend development, I have experience with Express.js and databases such as MongoDB. I also use tools like Git for version control and am comfortable with RESTful API integration.",
   },
   {
     question:
-      "How long does it typically take to complete a web design project?",
+      "How do you ensure the security of the web applications you develop?",
     answer:
-      " The timeline for completing a web design project can vary depending on the complexity of the project, the size of the website, and the availability of resources. However, as a general guideline, you can expect a small to medium-sized website to take anywhere from 2 to 4 weeks to complete. A larger or more complex website may take longer, up to 6 months or more.",
-  },
-  {
-    question: "Do you offer website maintenance services?",
-    answer:
-      "Yes, we offer website maintenance services to keep your website up-to-date, secure, and functioning properly. Our maintenance plans include regular updates to your website's software, security patches, and content updates. We also offer 24/7 support in case you need any assistance.",
-  },
-  {
-    question: "Can you optimize my website for search engines?",
-    answer:
-      "Yes, we can help you optimize your website for search engines (SEO) to improve its visibility in search results. This involves a variety of techniques, such as keyword research, content optimization, and technical SEO. By optimizing your website for SEO, you can attract more visitors to your website and increase your online presence.",
+      "Security is a top priority in my development process. I implement best practices such as input validation, proper authentication, encryption of sensitive data, and protection against common vulnerabilities like SQL injection and cross-site scripting (XSS). I also stay updated with the latest security trends and updates to ensure the applications I build are well-protected.",
   },
   {
     question:
-      "Can you integrate third-party tools or platforms into my website?",
+      "How do you handle version control and collaboration with other developers?",
     answer:
-      "Yes, we can integrate third-party tools or platforms into your website to extend its functionality and add value for your visitors. This could include tools such as e-commerce platforms, social media widgets, or customer relationship management (CRM) systems. We will work with you to understand your needs and identify the best third-party tools to integrate into your website.",
+      "I use Git for version control, which allows me to track changes, manage branches, and collaborate efficiently with other developers. I follow best practices such as writing clear commit messages, creating feature branches for specific tasks, and regularly merging changes to avoid conflicts. I also participate in code reviews to maintain code quality and share knowledge within the team.",
+  },
+  {
+    question: "What is your approach to optimizing website performance?",
+    answer:
+      "I optimize website performance by minimizing HTTP requests, compressing images and files, implementing lazy loading for resources, and using techniques like caching and code splitting. On the server side, I ensure efficient database queries and optimize server response times. I also use tools like Lighthouse and WebPageTest to analyze performance and identify areas for improvement.",
   },
 ];

@@ -1,47 +1,47 @@
 import {
-  HiOutlineRectangleStack,
-  HiMiniDevicePhoneMobile,
-  HiOutlineUsers,
-  HiCursorArrowRays,
-  HiWindow,
-  HiCursorArrowRipple,
+  HiOutlineAdjustmentsVertical,
+  HiOutlinePuzzlePiece,
+  HiOutlineServerStack,
+  HiOutlineShieldCheck,
 } from "react-icons/hi2";
+import { BsDatabase } from "react-icons/bs";
+import { TbBrandGit } from "react-icons/tb";
 
 export const skillData = [
   {
-    title: "Web Design Principles",
+    title: "API Integration",
     description:
-      "Proficiency in the fundamental principles of design, such as layout, color theory, typography, and visual hierarchy.",
-    icon: HiOutlineRectangleStack,
+      "Proficient in integrating third-party APIs to extend functionality and enhance the performance of web applications.",
+    icon: HiOutlinePuzzlePiece,
   },
   {
-    title: "User Interface - UI Design",
+    title: "Database Management",
     description:
-      "Ability to create visually appealing and intuitive user interfaces that enhance user experience and engagement.",
-    icon: HiCursorArrowRays,
+      "Skilled in designing and managing databases, ensuring efficient data storage, retrieval, and security for web applications.",
+    icon: BsDatabase,
   },
   {
-    title: "User Experience - UX Design",
+    title: "Version Control",
     description:
-      "Understanding of user behavior and psychology to design seamless and enjoyable user experiences that meet user needs and goals.",
-    icon: HiOutlineUsers,
+      "Experienced in using Git for version control, enabling collaborative development and efficient project management.",
+    icon: TbBrandGit,
   },
   {
-    title: "Responsive Web Design",
+    title: "Backend Development",
     description:
-      "Knowledge of designing websites that adapt and function seamlessly across various devices and screen sizes.",
-    icon: HiWindow,
+      "Expertise in building and maintaining server-side logic, APIs, and databases to support dynamic web applications.",
+    icon: HiOutlineServerStack,
   },
   {
-    title: "Wireframing and Prototyping",
+    title: "Performance Optimization",
     description:
-      "Ability to create wireframes and interactive prototypes to visualize and test website layouts and functionality.",
-    icon: HiCursorArrowRipple,
+      "Focused on optimizing website performance through code efficiency, caching strategies, and minimizing load times.",
+    icon: HiOutlineAdjustmentsVertical,
   },
   {
-    title: "Mobile-Friendly Optimization",
+    title: "Security Best Practices",
     description:
-      "Proficiency in the fundamental principles of design, such as layout, color theory, typography, and visual hierarchy.",
-    icon: HiMiniDevicePhoneMobile,
+      "Knowledgeable in implementing security measures, including encryption, authentication, and regular updates, to protect web applications from vulnerabilities.",
+    icon: HiOutlineShieldCheck,
   },
 ];

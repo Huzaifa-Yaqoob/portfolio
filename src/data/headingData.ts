@@ -9,21 +9,15 @@ export const skillsHeader: Header = {
     "As a web designer, I possess a diverse set of skills and expertise to bring your web design visions to life",
 };
 
-export const benefitsHeader: Header = {
-  heading: "Benefits",
+export const toolsAndTechnologiesHeader: Header = {
+  heading: "Tools & Technologies I Know",
   paragraph:
-    "By choosing my web design service, you'll enjoy the following benefits",
+    "Here are the tools and technologies I master to build efficient and innovative web solutions.",
 };
 
 export const worksHeader: Header = {
   heading: "My Works",
   paragraph: "Here's some of my works for my clients",
-};
-
-export const reviewHeader: Header = {
-  heading: "What My Clients say About Me",
-  paragraph:
-    "Here's what some of my satisfied clients have to say about my work",
 };
 
 export const FAQHeader: Header = {
@@ -34,17 +28,15 @@ export const FAQHeader: Header = {
 export const MileStonesHeader: Header = {
   heading: "Milestones of My Career",
   paragraph:
-    "Lorem ipsum dolor sit amet consectetur. Nisl ut neque tortor nulla felis nunc. Sit ac sed sed pulvinar sit purus morbi. Elit amet sed velit auctor urna vitae nam ultricies massa.",
+    "Here are the milestones that have shaped my personal and professional development.",
 };
 
 export const portfolioHeader: Header = {
   heading: "My Creative Portfolios",
-  paragraph:
-    "Here's what some of my satisfied clients have to say about my work",
+  paragraph: "Here is some information about my work.",
 };
 
 export const contactMeHeader: Header = {
-  heading: "We’d love to here from you.",
-  paragraph:
-    "Here's what some of my satisfied clients have to say about my work",
+  heading: "I’d love to here from you.",
+  paragraph: "Here are some qualities I possess that can satisfy my clients.",
 };

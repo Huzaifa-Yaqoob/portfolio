@@ -6,30 +6,30 @@ export type CarousalData = {
 // For home page My Works Section
 export const carousalData: CarousalData[] = [
   {
-    title: "Z - Aura Perfume Website Design",
+    title: "Smart Business Directory",
     images: [
-      "/assets/work/2023/Aura_Perfume.png",
-      "/assets/work/2023/Aura_Perfume.png",
-      "/assets/work/2023/Aura_Perfume.png",
-      "/assets/work/2023/Aura_Perfume.png",
+      "/assets/work/home.png",
+      "/assets/work/about.png",
+      "/assets/work/profile.png",
+      "/assets/work/categories.png",
     ],
   },
   {
-    title: "Forhelp Charity Website Design",
+    title: "My Portfolio",
     images: [
-      "/assets/work/2023/Forhelp_Charity.png",
-      "/assets/work/2023/Forhelp_Charity.png",
-      "/assets/work/2023/Forhelp_Charity.png",
-      "/assets/work/2023/Forhelp_Charity.png",
+      "/assets/work/portfolio/home.png",
+      "/assets/work/portfolio/about.png",
+      "/assets/work/portfolio/portfolio.png",
+      "/assets/work/portfolio/contact.png",
     ],
   },
   {
-    title: "Skill Bridge Website Design",
+    title: "My First Project",
     images: [
-      "/assets/work/2023/Skill_Bridge.png",
-      "/assets/work/2023/Skill_Bridge.png",
-      "/assets/work/2023/Skill_Bridge.png",
-      "/assets/work/2023/Skill_Bridge.png",
+      "/assets/work/first-project/home.png",
+      "/assets/work/first-project/home2.png",
+      "/assets/work/first-project/homeBlack.png",
+      "/assets/work/first-project/form.png",
     ],
   },
 ];

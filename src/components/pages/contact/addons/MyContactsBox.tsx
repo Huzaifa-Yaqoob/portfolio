@@ -33,9 +33,11 @@ export default function MyContactsBox({
         <p className="text-greyShades-g20 font-medium">{info}</p>
       </div>
       <div className="p-2 rounded border border-peachShades-p85 text-greyShades-g20">
-        <div ref={scope}>
-          <HiArrowRight />
-        </div>
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          <div ref={scope}>
+            <HiArrowRight />
+          </div>
+        </a>
       </div>
     </div>
   );

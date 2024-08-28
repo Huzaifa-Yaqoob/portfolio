@@ -5,13 +5,14 @@ import {
   HiUserGroup,
   HiCheckBadge,
   HiChatBubbleLeftRight,
-  HiBolt,
-  HiClock,
 } from "react-icons/hi2";
-import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { FiDribbble } from "react-icons/fi";
+import { FaGithub, FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa6";
+import { GiBoltShield } from "react-icons/gi";
+import { MdPublishedWithChanges } from "react-icons/md";
 import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
 import { type Header, portfolioHeader, contactMeHeader } from "./headingData";
+import { BiSolidCommentCheck } from "react-icons/bi";
 
 export type AchievementInfo = {
   quantity: string;
@@ -33,9 +34,21 @@ export type SocialLinks = {
 };
 
 export const socialLinks: SocialLinks[] = [
-  { name: "Linkedin", href: "/", icon: FaLinkedin },
-  { name: "X", href: "/", icon: FaXTwitter },
-  { name: "Dribbble", href: "/", icon: FiDribbble },
+  {
+    name: "Linkedin",
+    href: "https://www.linkedin.com/in/huzaifa-yaqoob-67b9a0242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+    icon: FaLinkedin,
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/Huzaifa-Yaqoob",
+    icon: FaGithub,
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/_huzaifa.dev?igsh=Mm9hcjM1Z294Yjh1 ",
+    icon: FaInstagram,
+  },
 ];
 
 export type ContactInfo = {
@@ -48,20 +61,20 @@ export type ContactInfo = {
 export const contactInfo: ContactInfo[] = [
   {
     heading: "You can Email Me Here",
-    href: "",
-    info: "nextdev@gmail.com",
+    href: "mailto:muhammadhuzaifayaqoob3@gmail.com",
+    info: "muhammadhuzaifayaqoob3@gmail.com",
     icon: HiMail,
   },
   {
     heading: "Give Me a Call on",
-    href: "",
-    info: "+92 1234567899",
+    href: "https://wa.me/923200422146",
+    info: "+92 320 0422146",
     icon: HiPhone,
   },
   {
     heading: "Location",
-    href: "",
-    info: "Somewhere in the World",
+    href: "https://www.google.com/maps/place/Shahdara,+Lahore,+Punjab,+Pakistan/@31.624365,74.2412519,13.01z/data=!4m6!3m5!1s0x39191c47be50fcdb:0x3cf241986ed44db5!8m2!3d31.6211127!4d74.2823662!16s%2Fm%2F02z6qgb?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D",
+    info: "Shahdara Town, Lahore, Punjab, Pakistan",
     icon: HiLocationMarker,
   },
 ];
@@ -69,15 +82,15 @@ export const contactInfo: ContactInfo[] = [
 // Achievement Info use in hero section at home page and about page
 export const achievementInfo: AchievementInfo[] = [
   {
-    quantity: "55",
+    quantity: "02",
     title: "Completed Projects",
   },
   {
-    quantity: "20",
-    title: "Happy Customers",
+    quantity: "01",
+    title: "Ongoing Projects",
   },
   {
-    quantity: "08",
+    quantity: "01",
     title: "Years of Experience",
   },
 ];
@@ -88,24 +101,15 @@ export const portfolioInfo: Intro = {
   MainIcon: HiMiniSparkles,
   info: [
     {
-      text:
-        achievementInfo[0].quantity.toString() +
-        "+ " +
-        achievementInfo[0].title,
+      text: achievementInfo[0].quantity.toString() + achievementInfo[0].title,
       icon: HiCheckBadge,
     },
     {
-      text:
-        achievementInfo[1].quantity.toString() +
-        "+ " +
-        achievementInfo[1].title,
+      text: achievementInfo[1].quantity.toString() + achievementInfo[1].title,
       icon: HiUserGroup,
     },
     {
-      text:
-        achievementInfo[2].quantity.toString() +
-        "+ " +
-        achievementInfo[2].title,
+      text: achievementInfo[2].quantity.toString() + achievementInfo[2].title,
       icon: HiChartBar,
     },
   ],
@@ -115,8 +119,8 @@ export const contactMeInfo: Intro = {
   header: contactMeHeader,
   MainIcon: HiChatBubbleLeftRight,
   info: [
-    { text: "24 / 7 Assistance", icon: HiClock },
-    { text: "Quick Change Resolutions", icon: HiBolt },
-    { text: "Flexible Working hours", icon: HiMiniSparkles },
+    { text: "Reliability", icon: GiBoltShield },
+    { text: "Adaptability", icon: MdPublishedWithChanges },
+    { text: "Strong Communication Skills", icon: BiSolidCommentCheck },
   ],
 };

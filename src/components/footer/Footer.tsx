@@ -8,9 +8,7 @@ export default function Footer() {
   return (
     <footer className="my-container border-t-[1px] space-y-4 ">
       <div className="flex flex-col md:flex-row gap-4 md:justify-between items-center">
-        <div className="text-primary font-semibold order-1">
-          Jeffery Cannon.
-        </div>
+        <div className="text-primary font-semibold order-1">Next_Dev</div>
         <div className="order-3 md:order-2 space-x-4">
           {pageLinks.map((link) => (
             <Button
@@ -18,31 +16,29 @@ export default function Footer() {
               asChild
               variant="link"
               className="text-greyShades-g20 p-0"
+              name={link.name}
             >
-              <Link href={link.href}>{link.name}</Link>
+              <Link href={link.href} area-label={link.name}>
+                {link.name}
+              </Link>
             </Button>
           ))}
         </div>
         <div className="flex gap-4 order-2 md:order-3">
           {socialLinks.map((link) => (
-            <Link target="_blank" key={link.name} href={link.href}>
+            <Link
+              target="_blank"
+              key={link.name}
+              href={link.href}
+              area-label={link.name}
+            >
               <GlowingButton Icon={link.icon} />
             </Link>
           ))}
         </div>
       </div>
-      <div className="hidden justify-center md:flex">
-        <div className="p-2 flex gap-6 items-center border-[1px] rounded">
-          {contactInfo.map((item, index) => (
-            <div key={index} className="flex gap-2 items-center">
-              <item.icon className="text-primary" />
-              <span className="">{item.info}</span>
-            </div>
-          ))}
-        </div>
-      </div>
       <div className="text-greyShades-g50 text-center">
-        Copyright © 2023 Jeffery Cannon. All rights reserved.
+        Copyright © 2023 Muhammad Huzaifa Yaqoob. All rights reserved.
       </div>
     </footer>
   );

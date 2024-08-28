@@ -128,10 +128,11 @@ export default function ContactForm() {
                         return (
                           <FormItem
                             key={item.id}
-                            className="flex flex-row items-start space-x-3 space-y-0"
+                            className="flex flex-row items-start space-x-3 space-y-0 cursor-pointer"
                           >
                             <FormControl>
                               <Checkbox
+                                name={item.label}
                                 checked={field.value?.includes(item.id)}
                                 onCheckedChange={(checked) => {
                                   return checked
@@ -144,7 +145,7 @@ export default function ContactForm() {
                                 }}
                               />
                             </FormControl>
-                            <FormLabel className="font-normal">
+                            <FormLabel className="font-normal cursor-pointer w-full">
                               {item.label}
                             </FormLabel>
                           </FormItem>
@@ -174,12 +175,12 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        <div className="flex items-center justify-center col-span-2">
-          <Button type="submit" className="px-8">
-            Send
-          </Button>
-        </div>
+        <div className="flex items-center justify-center col-span-2"></div>
+        <Button type="submit" className="px-8">
+          Send
+        </Button>
       </form>
+      <span>This part is just for showcase</span>
     </Form>
   );
 }

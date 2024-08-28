@@ -31,9 +31,9 @@ export default function MyContacts() {
         <div className="flex gap-4 order-2 md:order-3">
           {socialLinks.map((link, index) => (
             <RevealViaScale key={index} delay={index + 4}>
-              <Link target="_blank" href={link.href}>
+              <a target="_blank" href={link.href}>
                 <GlowingButton Icon={link.icon} size="text-xl" />
-              </Link>
+              </a>
             </RevealViaScale>
           ))}
         </div>

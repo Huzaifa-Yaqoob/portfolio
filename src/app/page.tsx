@@ -1,9 +1,6 @@
-import { Suspense } from "react";
 import HeroSection from "@/components/pages/home/HeroSection";
 import SkillsSection from "@/components/pages/home/SkillsSection";
-import BenefitsSection from "@/components/pages/home/BenefitsSection";
-import MyWorksSection from "@/components/pages/home/MyWorksSection";
-import ReviewSection from "@/components/pages/home/ReviewSection";
+import ToolsAndTechnology from "@/components/pages/home/ToolsAndTechnology";
 import FAQSection from "@/components/pages/common/FAQSection";
 
 export default function Home() {
@@ -11,9 +8,7 @@ export default function Home() {
     <main className="space-y-32 mb-16">
       <HeroSection />
       <SkillsSection />
-      <BenefitsSection />
-      <MyWorksSection />
-      <ReviewSection />
+      <ToolsAndTechnology />
       <FAQSection />
     </main>
   );

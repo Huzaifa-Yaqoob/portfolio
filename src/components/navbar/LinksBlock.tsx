@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { type PageLinks } from "./Navbar";
 import { Button } from "../ui/button";
-import BookACallButton from "../common/BookACallButton";
 
 interface LinksBlockProps {
   links: Array<PageLinks>;
@@ -29,7 +28,6 @@ export default function LinksBlock({
           </Link>
         </Button>
       ))}
-      <BookACallButton />
     </div>
   );
 }

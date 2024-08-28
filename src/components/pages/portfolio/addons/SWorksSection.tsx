@@ -1,54 +1,22 @@
-import { worksCarousalData } from "@/data/worksData";
-import ButtonWithArrow from "@/components/common/ButtonWithArrow";
-import WorksCarousal from "@/components/common/carousals/WorksCarousal";
-import { Separator } from "@/components/ui/separator";
-import Reveal from "@/components/animations/Reveal";
+import { CarousalData } from "@/data/carousalData";
+import ImagesCarousal from "@/components/common/carousals/ImagesCarousal";
 
-export default function SWorksSection() {
+interface SWorksSectionProps {
+  carousalData: CarousalData[];
+}
+
+export default function SWorksSection({ carousalData }: SWorksSectionProps) {
   return (
-    <div className="space-y-16 block md:hidden">
-      <Reveal classes="">
-        <div className="space-y-8">
-          <h3 className="text-center md:text-left">
-            {worksCarousalData.works2023.title}
-          </h3>
-          <Separator />
-          <WorksCarousal
-            carousalData={worksCarousalData.works2023.carousalData.slice(0, 3)}
-          />
-          <div className="flex justify-center items-center">
-            <ButtonWithArrow text="View All Projects" variant={"default"} />
-          </div>
+    <div className="md:grid md:grid-cols-3 md:grid-rows-1 gap-4">
+      {carousalData.map((images, index) => (
+        <div
+          key={index}
+          className="bg-peachShades-p96 rounded w-full p-4 space-y-2"
+        >
+          <h3 className="font-semibold text-greyShades-g20">{images.title}</h3>
+          <ImagesCarousal images={images.images} />
         </div>
-      </Reveal>
-      <Reveal classes="">
-        <div className="space-y-8">
-          <h3 className="text-center md:text-left">
-            {worksCarousalData.works2022.title}
-          </h3>
-          <Separator />
-          <WorksCarousal
-            carousalData={worksCarousalData.works2022.carousalData.slice(0, 3)}
-          />
-          <div className="flex justify-center items-center">
-            <ButtonWithArrow text="View All Projects" variant={"default"} />
-          </div>
-        </div>
-      </Reveal>
-      <Reveal classes="">
-        <div className="space-y-8">
-          <h3 className="text-center md:text-left">
-            {worksCarousalData.works2021.title}
-          </h3>
-          <Separator />
-          <WorksCarousal
-            carousalData={worksCarousalData.works2021.carousalData.slice(0, 3)}
-          />
-          <div className="flex justify-center items-center">
-            <ButtonWithArrow text="View All Projects" variant={"default"} />
-          </div>
-        </div>
-      </Reveal>
+      ))}
     </div>
   );
 }

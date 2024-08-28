@@ -31,7 +31,7 @@ export default function Navbar(): React.ReactElement {
   return (
     <NavVisibility classes="bg-background border-b-[1px] my-container flex justify-between items-center sticky top-0 z-10">
       <Link href="/" className="text-primary font-semibold">
-        Jeffery Cannon.
+        Next_Dev
       </Link>
       <div>
         <LinksBlock links={pageLinks} />

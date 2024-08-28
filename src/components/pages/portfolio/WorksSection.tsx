@@ -1,13 +1,19 @@
+import Reveal from "../../animations/Reveal";
+import { worksHeader } from "@/data/headingData";
+import SubHeading from "../../common/SubHeading";
+import ButtonWithArrow from "../../common/ButtonWithArrow";
 import SWorksSection from "./addons/SWorksSection";
-import LWorksSection from "./addons/LWorksSection";
+import { carousalData } from "@/data/carousalData";
+import WorksCarousal from "@/components/common/carousals/WorksCarousal";
 
-export default function WorksSection() {
+export default function MyWorksSection() {
   return (
-    <section className="my-container">
-      {/* Section for large devices */}
-      <LWorksSection />
-      {/* section for small devices */}
-      <SWorksSection />
+    <section className="my-container space-y-8">
+      <SubHeading header={worksHeader} />
+      <Reveal classes="">
+        {/* <WorksCarousal carousalData={carousalData} /> */}
+        <SWorksSection carousalData={carousalData} />
+      </Reveal>
     </section>
   );
 }

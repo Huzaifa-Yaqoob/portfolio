@@ -12,7 +12,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Button } from "../ui/button";
-import BookACallButton from "../common/BookACallButton";
 
 interface LinksBlockProps {
   links: Array<PageLinks>;
@@ -28,7 +27,7 @@ export default function LinksPopover({ links }: LinksBlockProps) {
   return (
     <div className="block md:hidden">
       <Popover open={open} onOpenChange={setOpen}>
-        <PopoverTrigger>
+        <PopoverTrigger asChild name="menu">
           <div
             className={`text-2xl p-1 rounded ${
               open ? "bg-greyShades-g60" : ""
@@ -56,7 +55,6 @@ export default function LinksPopover({ links }: LinksBlockProps) {
                 </Button>
               ))}
             </div>
-            <BookACallButton />
           </div>
         </PopoverContent>
       </Popover>
