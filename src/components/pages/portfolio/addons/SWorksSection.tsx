@@ -7,7 +7,7 @@ interface SWorksSectionProps {
 
 export default function SWorksSection({ carousalData }: SWorksSectionProps) {
   return (
-    <div className="md:grid md:grid-cols-3 md:grid-rows-1 gap-4">
+    <div className="md:grid md:grid-cols-3 md:grid-rows-1 gap-4 space-y-4 md:space-y-0">
       {carousalData.map((images, index) => (
         <div
           key={index}
