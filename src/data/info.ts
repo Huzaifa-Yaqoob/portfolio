@@ -2,8 +2,6 @@ import { type IconType } from "react-icons";
 import {
   HiMiniSparkles,
   HiChartBar,
-  HiUserGroup,
-  HiCheckBadge,
   HiChatBubbleLeftRight,
 } from "react-icons/hi2";
 import { FaGithub, FaInstagram } from "react-icons/fa";
@@ -13,6 +11,8 @@ import { MdPublishedWithChanges } from "react-icons/md";
 import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
 import { type Header, portfolioHeader, contactMeHeader } from "./headingData";
 import { BiSolidCommentCheck } from "react-icons/bi";
+import { GiStairsGoal } from "react-icons/gi";
+import { MdOutlineGolfCourse } from "react-icons/md";
 
 export type AchievementInfo = {
   quantity: string;
@@ -46,7 +46,7 @@ export const socialLinks: SocialLinks[] = [
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/_huzaifa.dev?igsh=Mm9hcjM1Z294Yjh1 ",
+    href: "https://www.instagram.com/huzaifa_next_dev?igsh=eGQ2dWQ5ZDl1NHN1",
     icon: FaInstagram,
   },
 ];
@@ -67,8 +67,8 @@ export const contactInfo: ContactInfo[] = [
   },
   {
     heading: "Give Me a Call on",
-    href: "https://wa.me/923200422146",
-    info: "+92 320 0422146",
+    href: "https://wa.me/message/3ID6XTAYGOFNN1",
+    info: "+92 317 0422046",
     icon: HiPhone,
   },
   {
@@ -82,7 +82,7 @@ export const contactInfo: ContactInfo[] = [
 // Achievement Info use in hero section at home page and about page
 export const achievementInfo: AchievementInfo[] = [
   {
-    quantity: "02",
+    quantity: "03",
     title: "Completed Projects",
   },
   {
@@ -102,11 +102,11 @@ export const portfolioInfo: Intro = {
   info: [
     {
       text: achievementInfo[0].quantity.toString() + achievementInfo[0].title,
-      icon: HiCheckBadge,
+      icon: MdOutlineGolfCourse,
     },
     {
       text: achievementInfo[1].quantity.toString() + achievementInfo[1].title,
-      icon: HiUserGroup,
+      icon: GiStairsGoal,
     },
     {
       text: achievementInfo[2].quantity.toString() + achievementInfo[2].title,

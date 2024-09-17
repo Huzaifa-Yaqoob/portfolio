@@ -32,4 +32,13 @@ export const carousalData: CarousalData[] = [
       "/assets/work/first-project/form.png",
     ],
   },
+  {
+    title: "Inspirisia",
+    images: [
+      "/assets/work/inspirisia/hero.png",
+      "/assets/work/inspirisia/features.png",
+      "/assets/work/inspirisia/men_help.png",
+      "/assets/work/inspirisia/community.png",
+    ],
+  },
 ];

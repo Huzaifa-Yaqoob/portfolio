@@ -4,9 +4,9 @@ export type Header = {
 };
 
 export const skillsHeader: Header = {
-  heading: "Creative Skills",
+  heading: "Web Development Skills",
   paragraph:
-    "As a web designer, I possess a diverse set of skills and expertise to bring your web design visions to life",
+    "I specialize in building secure, high-performance web applications, with expertise in API integration, database management, and backend development.",
 };
 
 export const toolsAndTechnologiesHeader: Header = {
@@ -37,6 +37,6 @@ export const portfolioHeader: Header = {
 };
 
 export const contactMeHeader: Header = {
-  heading: "I’d love to here from you.",
+  heading: "I'd love to here from you.",
   paragraph: "Here are some qualities I possess that can satisfy my clients.",
 };

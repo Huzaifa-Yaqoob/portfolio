@@ -18,12 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${manrope.className} min-h-screen flex flex-col justify-between`}
-      >
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+      <body className={`${manrope.className} flex items-center justify-center`}>
+        <div className="min-h-screen max-w-screen-2xl w-full flex flex-col justify-between">
+          <Navbar />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
