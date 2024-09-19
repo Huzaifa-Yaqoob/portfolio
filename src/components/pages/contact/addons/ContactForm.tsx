@@ -3,6 +3,7 @@
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { Loader2 } from "lucide-react";
 import { contactFormSchema } from "@/lib/zodSchema";
 import { Button } from "@/components/ui/button";
 import {
@@ -17,8 +18,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { checkboxData } from "@/data/formData";
+import useSendEmail from "@/hooks/useSendEmail";
 
 export default function ContactForm() {
+  const { isLoading, error, sendEmail } = useSendEmail();
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -32,10 +35,11 @@ export default function ContactForm() {
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof contactFormSchema>) {
+  async function onSubmit(values: z.infer<typeof contactFormSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
+    await sendEmail(values);
   }
   return (
     <Form {...form}>
@@ -177,10 +181,18 @@ export default function ContactForm() {
         />
         <div className="flex items-center justify-center col-span-2"></div>
         <Button type="submit" className="px-8">
-          Send
+          {isLoading ? (
+            <Loader2 className="mr-2 h-6 w-6 animate-spin" />
+          ) : (
+            "send"
+          )}
         </Button>
+        {error === null ? (
+          <></>
+        ) : (
+          <p className="text-destructive-foreground">{error}</p>
+        )}
       </form>
-      <span>This part is just for showcase</span>
     </Form>
   );
 }
