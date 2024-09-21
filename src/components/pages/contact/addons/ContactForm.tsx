@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -19,8 +20,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { checkboxData } from "@/data/formData";
 import useSendEmail from "@/hooks/useSendEmail";
+import DrawSVG from "@/components/animations/DrawSVG";
 
 export default function ContactForm() {
+  const [success, setSuccess] = useState(false);
   const { isLoading, error, sendEmail } = useSendEmail();
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
@@ -39,8 +42,20 @@ export default function ContactForm() {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
-    await sendEmail(values);
+    const ok = await sendEmail(values);
+    if (ok && success === false) {
+      setSuccess(true);
+      setTimeout(() => {
+        setSuccess(false);
+      }, 2000);
+      form.reset();
+    }
   }
+
+  // SVG path for a tick
+  const svgPath =
+    "M7 11.878c.941.685 2.824 2.568 3.595 3.852.941-2.054 3.337-6.676 5.905-8.73";
+
   return (
     <Form {...form}>
       <form
@@ -180,8 +195,13 @@ export default function ContactForm() {
           )}
         />
         <div className="flex items-center justify-center col-span-2"></div>
-        <Button type="submit" className="px-8">
-          {isLoading ? (
+        <Button type="submit" className="px-8" disabled={isLoading || success}>
+          {success ? (
+            <>
+              Done
+              <DrawSVG svg={svgPath} duration={0.8} />
+            </>
+          ) : isLoading ? (
             <Loader2 className="mr-2 h-6 w-6 animate-spin" />
           ) : (
             "send"
@@ -190,7 +210,7 @@ export default function ContactForm() {
         {error === null ? (
           <></>
         ) : (
-          <p className="text-destructive-foreground">{error}</p>
+          <p className="text-destructive text-sm">{error}</p>
         )}
       </form>
     </Form>

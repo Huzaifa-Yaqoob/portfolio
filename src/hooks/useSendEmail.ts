@@ -2,7 +2,6 @@
 
 import * as z from "zod";
 import { useState } from "react";
-import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 import { contactFormSchema } from "@/lib/zodSchema";
 
 export default function useSendEmail() {
@@ -13,19 +12,23 @@ export default function useSendEmail() {
     setIsLoading(true);
     setError(null);
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_SERVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
-        data,
-        {
-          publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY,
-        }
-      );
-    } catch (error) {
-      if (error instanceof EmailJSResponseStatus) {
-        setError(error.text);
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      if (res.status === 200) {
+        return true;
+      } else {
+        throw new Error(
+          res.statusText || "An error occurred while sending the email."
+        );
       }
-      setError("An error occurred while sending the email.");
+    } catch (error: any) {
+      setError(error.message as string);
+      return false;
     } finally {
       setIsLoading(false);
     }
