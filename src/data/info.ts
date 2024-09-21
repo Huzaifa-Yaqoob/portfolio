@@ -61,7 +61,7 @@ export type ContactInfo = {
 export const contactInfo: ContactInfo[] = [
   {
     heading: "You can Email Me Here",
-    href: "mailto:muhammadhuzaifayaqoob3@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=muhammadhuzaifayaqoob3@gmail.com&su=Portfolio%20Inquiry&body=Hello,%20I%20am%20interested%20in%20learning%20more%20about%20your%20work.",
     info: "muhammadhuzaifayaqoob3@gmail.com",
     icon: HiMail,
   },

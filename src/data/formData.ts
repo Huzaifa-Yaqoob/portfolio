@@ -4,8 +4,8 @@ export type CheckboxData = {
 };
 
 export const checkboxData: CheckboxData[] = [
-  { id: "web_design", label: "Web Design" },
-  { id: "collaboration", label: "Collaboration" },
-  { id: "mobile_app_Design", label: "Mobile App Design" },
-  { id: "others", label: "Others" },
+  { id: "Web Development", label: "Web Development" },
+  { id: "Collaboration", label: "Collaboration" },
+  { id: "To Hire", label: "To Hire" },
+  { id: "Others", label: "Others" },
 ];
