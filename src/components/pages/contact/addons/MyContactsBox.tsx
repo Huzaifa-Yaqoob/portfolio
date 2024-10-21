@@ -30,7 +30,9 @@ export default function MyContactsBox({
     >
       <div className="space-y-1">
         <h1 className="text-sm">{heading}</h1>
-        <p className="text-greyShades-g20 font-medium">{info}</p>
+        <p className="text-greyShades-g20 font-medium break-words w-[250px] sm:w-full">
+          {info}
+        </p>
       </div>
       <div className="p-2 rounded border border-peachShades-p85 text-greyShades-g20">
         <a href={href} target="_blank" rel="noopener noreferrer">

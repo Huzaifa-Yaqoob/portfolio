@@ -3,6 +3,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { RevealPersonImage } from "@/components/animations/Reveal";
 import Reveal from "@/components/animations/Reveal";
 import { achievementInfo } from "@/data/info";
+import DownloadSection from "./addons/DownloadSection";
 
 export default function IntroSection() {
   return (
@@ -51,6 +52,7 @@ export default function IntroSection() {
             </p>
           </Reveal>
         </div>
+        <DownloadSection />
         <div className="flex flex-col gap-0 md:flex-row md:gap-4 lg:gap-8 md:border-b md:border-primary md:border-t bg-peachShades-p96 rounded-lg md:bg-transparent md:rounded-none">
           {achievementInfo.map((achievement, index) => (
             <div

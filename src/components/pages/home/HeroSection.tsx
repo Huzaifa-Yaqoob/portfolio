@@ -60,7 +60,9 @@ export default function HeroSection() {
                     className="flex gap-2 items-center border p-1 rounded"
                   >
                     <item.icon className="text-primary" />
-                    <span className="">{item.info}</span>
+                    <span className="break-words w-[250px] sm:w-full">
+                      {item.info}
+                    </span>
                   </a>
                 </Reveal>
               ))}

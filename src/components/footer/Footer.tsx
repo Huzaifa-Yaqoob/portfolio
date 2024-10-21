@@ -38,7 +38,17 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-greyShades-g50 text-center">
-        Copyright © 2023 Muhammad Huzaifa Yaqoob. All rights reserved.
+        Copyright © 2023 Muhammad Huzaifa Yaqoob. All rights reserved. <br />
+        The design is highly inspired from{" "}
+        <Button variant="link" className="m-0 p-0">
+          <a
+            href="https://www.figma.com/community/file/1296111343561954166/portfolio-website-ui-template-design-in-light-theme-beige-free-editable-figma"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Praha | Produce UI
+          </a>
+        </Button>
       </div>
     </footer>
   );
