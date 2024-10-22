@@ -82,11 +82,11 @@ export const contactInfo: ContactInfo[] = [
 // Achievement Info use in hero section at home page and about page
 export const achievementInfo: AchievementInfo[] = [
   {
-    quantity: "03",
+    quantity: "05",
     title: "Completed Projects",
   },
   {
-    quantity: "01",
+    quantity: "00",
     title: "Ongoing Projects",
   },
   {
@@ -101,15 +101,18 @@ export const portfolioInfo: Intro = {
   MainIcon: HiMiniSparkles,
   info: [
     {
-      text: achievementInfo[0].quantity.toString() + achievementInfo[0].title,
+      text:
+        achievementInfo[0].quantity.toString() + " " + achievementInfo[0].title,
       icon: MdOutlineGolfCourse,
     },
     {
-      text: achievementInfo[1].quantity.toString() + achievementInfo[1].title,
+      text:
+        achievementInfo[1].quantity.toString() + " " + achievementInfo[1].title,
       icon: GiStairsGoal,
     },
     {
-      text: achievementInfo[2].quantity.toString() + achievementInfo[2].title,
+      text:
+        achievementInfo[2].quantity.toString() + " " + achievementInfo[2].title,
       icon: HiChartBar,
     },
   ],

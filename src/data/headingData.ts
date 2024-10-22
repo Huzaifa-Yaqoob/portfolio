@@ -17,12 +17,12 @@ export const toolsAndTechnologiesHeader: Header = {
 
 export const worksHeader: Header = {
   heading: "My Works",
-  paragraph: "Here's some of my works for my clients",
+  paragraph: "Here's some of my works.",
 };
 
 export const FAQHeader: Header = {
   heading: "Frequently Asked Questions ",
-  paragraph: "Here are answers to some common questions",
+  paragraph: "Here are answers to some common questions.",
 };
 
 export const MileStonesHeader: Header = {

@@ -21,7 +21,7 @@ export default function IntroSection({ intro }: IntroSectionProps) {
             <Reveal
               key={index}
               delay={index + 1}
-              classes="flex items-center gap-2 p-2 border border-peachShades-p90 rounded"
+              classes="flex items-center gap-2 p-2 border border-peachShades-p90 rounded space-x-2"
             >
               <inf.icon className="text-primary text-lg" />
               <span>{inf.text}</span>

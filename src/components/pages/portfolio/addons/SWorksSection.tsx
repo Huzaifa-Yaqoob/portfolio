@@ -1,3 +1,4 @@
+import { Github } from "lucide-react";
 import { CarousalData } from "@/data/carousalData";
 import ImagesCarousal from "@/components/common/carousals/ImagesCarousal";
 
@@ -11,9 +12,21 @@ export default function SWorksSection({ carousalData }: SWorksSectionProps) {
       {carousalData.map((images, index) => (
         <div
           key={index}
-          className="bg-peachShades-p96 rounded w-full p-4 space-y-2"
+          className="bg-peachShades-p96 rounded w-full p-4 space-y-4"
         >
-          <h3 className="font-semibold text-greyShades-g20">{images.title}</h3>
+          <main>
+            <h3 className="font-semibold text-greyShades-g20 text-lg flex gap-1 items-center">
+              {images.title}{" "}
+              <a
+                href={images.gitLink}
+                target="_blank"
+                className="hover:text-primary"
+              >
+                <Github size={18} />
+              </a>
+            </h3>
+            <p className="">{images.description}</p>
+          </main>
           <ImagesCarousal images={images.images} />
         </div>
       ))}
