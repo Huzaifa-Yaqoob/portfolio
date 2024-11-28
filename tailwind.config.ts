@@ -123,10 +123,15 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        "opacity-pulse": {
+          "0%, 100%": { opacity: "0.2" },
+          "50%": { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "opacity-pulse": "opacity-pulse 2s  infinite",
       },
     },
   },

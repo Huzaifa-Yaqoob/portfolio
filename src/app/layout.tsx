@@ -8,7 +8,10 @@ const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Your Next Dev 🤗",
-  description: "Portfolio website of Muhammad Huzaifa Yaqoob",
+  description:
+    "Welcome to the portfolio of Muhammad Huzaifa Yaqoob — a dedicated MERN Stack developer crafting modern, scalable, and user-friendly web solutions",
+  keywords:
+    "Muhammad Huzaifa Yaqoob, MERN Stack Developer, Portfolio, Next.js Developer, Web Developer",
 };
 
 export default function RootLayout({
@@ -21,7 +24,7 @@ export default function RootLayout({
       <body className={`${manrope.className} flex items-center justify-center`}>
         <div className="min-h-screen max-w-screen-2xl w-full flex flex-col justify-between">
           <Navbar />
-          <main className="flex-grow">{children}</main>
+          {children}
           <Footer />
         </div>
       </body>

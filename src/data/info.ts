@@ -67,7 +67,7 @@ export const contactInfo: ContactInfo[] = [
   },
   {
     heading: "Give Me a Call on",
-    href: "https://wa.me/message/3ID6XTAYGOFNN1",
+    href: "https://wa.me/message/YL5UKSCNRKKFA1",
     info: "+92 317 0422046",
     icon: HiPhone,
   },

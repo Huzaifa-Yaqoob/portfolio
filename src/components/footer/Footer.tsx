@@ -42,7 +42,7 @@ export default function Footer() {
         The design is highly inspired from{" "}
         <Button variant="link" className="m-0 p-0">
           <a
-            href="https://www.figma.com/community/file/1296111343561954166/portfolio-website-ui-template-design-in-light-theme-beige-free-editable-figma"
+            href="https://www.figma.com/community/file/1296111343561954166/"
             target="_blank"
             rel="noopener noreferrer"
           >

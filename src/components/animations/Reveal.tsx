@@ -10,6 +10,10 @@ interface RevealProps {
   delay?: number;
 }
 
+interface RevealPersonImageProps extends RevealProps {
+  endAt?: number;
+}
+
 export default function Reveal({
   children,
   classes = "w-fit",
@@ -43,8 +47,10 @@ export default function Reveal({
 export function RevealPersonImage({
   children,
   classes = "w-fit",
-  delay = 1,
-}: RevealProps) {
+  endAt = 0,
+
+  delay = 0.2,
+}: RevealPersonImageProps) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
   const control = useAnimation();
@@ -59,11 +65,11 @@ export function RevealPersonImage({
       className={classes}
       variants={{
         hidden: { opacity: 0, y: -75 },
-        visible: { opacity: 1, y: 0 },
+        visible: { opacity: 1, y: endAt },
       }}
       initial="hidden"
       animate={control}
-      transition={{ duration: 0.5, delay: 0.2 }}
+      transition={{ duration: 0.5, delay }}
     >
       {children}
     </motion.div>

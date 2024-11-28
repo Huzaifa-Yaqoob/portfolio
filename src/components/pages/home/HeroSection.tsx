@@ -11,10 +11,10 @@ export default function HeroSection() {
       <div className="md:order-2">
         <Reveal classes="w-full">
           <AspectRatio
-            ratio={120 / 163}
-            className="p-0 m-0 flex items-end bg-hero-pattern bg-cover bg-center bg-no-repeat heroImageMask"
+            ratio={100 / 163}
+            className="p-0 m-0 flex bg-hero-pattern bg-cover bg-center bg-no-repeat heroImageMask h-full"
           >
-            <RevealPersonImage>
+            <RevealPersonImage classes="w-full self-end relative" endAt={75}>
               <Image
                 src="/assets/person.png"
                 alt="person"
